@@ -19,6 +19,7 @@ public class TestController2 {
 		int testno = infodao.test();
 		System.out.println("testno:" + testno);
 		System.out.println("testno2:" + testno);
+		System.out.println("testno3:" + testno);
 		
 		return "testjsp";
 	}
