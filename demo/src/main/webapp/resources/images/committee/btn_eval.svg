@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22">
+    <g fill="none" fill-rule="evenodd">
+        <rect width="33" height="21" x=".5" y=".5" stroke="#979797" rx="2"/>
+        <text fill="#979797" font-family="SpoqaHanSans-Bold, SpoqaHanSans" font-size="12" font-weight="bold">
+            <tspan x="5.96" y="15">평가</tspan>
+        </text>
+    </g>
+</svg>

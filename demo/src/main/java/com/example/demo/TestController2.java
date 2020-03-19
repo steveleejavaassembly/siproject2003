@@ -23,5 +23,13 @@ public class TestController2 {
 		
 		return "testjsp";
 	}
+	
+	@RequestMapping(value = "/committee")
+	public String committee() {
+		
+		System.out.println("committee");
+		
+		return "committee/committee";
+	}
 
 }

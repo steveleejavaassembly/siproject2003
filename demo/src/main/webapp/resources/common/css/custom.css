@@ -1,0 +1,11 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+파일정의 : 회원가입 및 로그인
+작성날짜 : 2020-03-04
+참고사항 : 회원가입 및 로그인에만 쓰임
+-------------------------------------------------------------------*/
+.main-sec1 .title-area .tit {color:#ffffff;}
+.main {background-color:#629d96;}
+b, strong {font-weight:lighter !important;}
+input, button {border-radius: 2px !important;}
+.uk-button-primary {background-color:#232d3d !important;}

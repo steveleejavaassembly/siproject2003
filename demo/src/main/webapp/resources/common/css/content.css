@@ -1,0 +1,252 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	파일정의 : 컨텐츠 스타일
+	작성날짜 : 2020-02-04
+	참고사항 : 접근경로를 표시한다.
+	분류순서 : 공통화면 > 메뉴화면 > 팝업화면
+	속성순서 : 표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    ## 컨텐츠 공통
+-------------------------------------------------------------------*/
+.section-header {padding:16px 0 14px;}
+.section-container {padding:14px 0;}
+.section-container .total {padding:0 0 16px; font-size:12px; color:#5d5d5d;}
+.section-container .total em {font-weight:700;}
+
+.section-header .title-group {text-align:center;}
+.section-header .title-group .txt-area .tit {padding:0 0 12px; font-size:20px; font-weight:700; color:#4b4b4b; line-height:1.7;}
+.section-header .title-group .txt-area .txt {font-size:14px; color:#717171;}
+.section-header .title-group .btn-area {justify-content:center; align-items:center;}
+.section-header .title-group .btn-area .btn-line.is-active {position:absolute; right:16px;}
+
+
+/*-------------------------------------------------------------------
+    ## 메인
+-------------------------------------------------------------------*/
+/* .main .content button, p, strong, em, span, li {font-family:'Hanna';} */
+.main .content {font-family:'Hanna';}
+
+/* main sec1 */
+.main-sec1 {display:flex; flex-direction:column; height:100%; border-bottom:1px solid #cecece;}
+.main-sec1 .title-area {margin-top:auto; padding:0 0 50px; text-align:center;}
+.main-sec1 .title-area .tit {display:block; padding:20px 0; font-family:'Hanna'; font-size:11vh; color:#313131;}
+.main-sec1 .title-area .txt {font-family:'Hanna'; font-size:5vh; color:#808080;}
+.main-sec1 .title-area .date {font-family:'Hanna'; font-size:3vh; color:#313131;}
+.main-sec1 .img-area {text-align:center;}
+.main-sec1 .img-area > p img {width:80px; height:86px;}
+.main-sec1 .img-area + .btn-area {margin-top:auto;}
+.main-sec1 .btn-area {justify-content:center;}
+.main-sec1 .btn-area .btn-one {font-family:'Hanna';}
+.main-sec1 .btn-area .btn-toggle {margin:8px 0 4px; padding:8px 10px 6px; font-family:'Hanna'; color:#a2a2a2;}
+.main-sec1 .btn-area .btn-toggle .ico-arrow-toggle {margin-left:6px;}
+
+/* main sec 2,3,4 공통 */
+.main-sec2, .main-sec3, .main-sec4 {border-bottom:1px solid #cecece;}
+.main-sec2 .main-chart, .main-sec3 .main-assembly, .main-sec4 .main-bill {padding:54px 0;}
+.main-sec2 .chart-section .title-area,
+.main-sec3 .assembly-section .title-area,
+.main-sec4 .title-area {padding-bottom:30px;}
+.main-sec2 .chart-section .title-area .tit,
+.main-sec3 .assembly-section .title-area .tit,
+.main-sec4 .title-area .tit {display:inline-block; position:relative; padding-right:20px; font-size:24px; color:#313131; line-height:1.5;}
+.main-sec2 .chart-section .title-area .tit:before,
+.main-sec3 .assembly-section .title-area .tit:before,
+.main-sec4 .title-area .tit:before {content:''; display:block; position:absolute; top:50%; right:0; width:20px; height:20px; background:url('../../images/icon/ico_arrow_right.png') no-repeat top center; background-size:10px; transform:translateY(-50%);}
+.main-sec2 .chart-section .title-area .txt,
+.main-sec3 .assembly-section .title-area .txt,
+.main-sec4 .title-area .txt {font-size:15px; color:#8c8c8c;}
+.legend-list {padding-top:50px;}
+.legend-list li {padding-left:24px; font-size:18px; color:#313131; line-height:1.5;}
+
+/* main sec2 */
+.main-sec2 .chart-section.sec1 .grid {width:100%; height:556px;}
+.main-sec2 .chart-section.sec1 .grid .chart-area {width:50%; height:100%;}
+.main-sec2 .chart-section.sec1 .grid .chart-area .chart-bg {display:flex; justify-content:space-around; padding-top:80px;}
+.main-sec2 .chart-section.sec1 .grid .chart-area .chart-bg p {font-size:50px; color:#222; opacity:0.05; z-index:10;}
+.main-sec2 .chart-section.sec1 .grid .party-list {width:50%; height:100%; display:flex; flex-direction:column; justify-content:space-between; padding:15px 0 8px;}
+.main-sec2 .chart-section.sec1 .party-list li {display:flex;}
+.main-sec2 .chart-section.sec1 .party-list li + li {padding-top:20px;}
+.main-sec2 .chart-section.sec1 .party-list li .num {padding-right:20px; font-size:18px; color:#595852;}
+.main-sec2 .chart-section.sec1 .party-list li .tit {display:block; font-size:18px; color:#313131;}
+.main-sec2 .chart-section.sec1 .party-list li .total {font-size:13px; color:#9c9c9c;}
+/* chart area */
+.main-sec2 .chart {position:absolute; left:0; top:0; bottom:0; width:100%;}
+.main-sec2 .chart-section.sec1 .chart {width:100%}
+.main-sec2 .chart-section.sec1 .chart canvas {height:556px; width:100%;}
+.main-sec2 .chart-section.sec3 .chart {width:100%; top:50px; bottom:30px; height:auto;}
+.main-sec2 .chart-section.sec3 .chart canvas {height:324px; width:100%;}
+.main-sec2 .chart-section.sec4 .chart {width:100%; top:50px; bottom:30px; height:auto;}
+.main-sec2 .chart-section.sec4 .chart canvas {height:324px; width:100%;}
+.main-sec2 .chart-section.sec3 .chart::before,
+.main-sec2 .chart-section.sec4 .chart::before {content:''; position:absolute; left:0; top:50%; width:100%; height:1px; background-color:#464646;}
+/* chart bg */
+.main-sec2 .chart-area {position:relative;}
+.main-sec2 .chart-section.sec2 .chart-area,
+.main-sec2 .chart-section.sec3 .chart-area,
+.main-sec2 .chart-section.sec4 .chart-area {height:404px;}
+.main-sec2 .chart-section.sec3 .chart-bg,
+.main-sec2 .chart-section.sec4 .chart-bg {display:flex; position:relative; height:404px; flex-direction:column; justify-content:space-evenly;}
+.main-sec2 .chart-section.sec3 .chart-bg .txt-area,
+.main-sec2 .chart-section.sec4 .chart-bg .txt-area {position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding-bottom:0; z-index:10;}
+.main-sec2 .chart-section.sec3 .chart-bg .txt-area p,
+.main-sec2 .chart-section.sec4 .chart-bg .txt-area p {font-size:50px; color:#222; text-align:center; opacity:0.05;}
+.main-sec2 .chart-section.sec3 .chart-bg .txt-area p + p,
+.main-sec2 .chart-section.sec4 .chart-bg .txt-area p + p {padding-top:120px;}
+.main-sec2 .chart-section.sec3 .chart-bg .bg-area,
+.main-sec2 .chart-section.sec4 .chart-bg .bg-area {display:flex; height:404px; justify-content:space-between;}
+.main-sec2 .chart-section.sec3 .chart-bg .bg-area > div {width:16.66%; background-color:rgba(0,0,0,0.02);}
+.main-sec2 .chart-section.sec4 .chart-bg .bg-area > div {width:50%; background-color:rgba(0,0,0,0.02);}
+.main-sec2 .chart-section.sec3 .chart-bg .bg-area > div:nth-child(even),
+.main-sec2 .chart-section.sec4 .chart-bg .bg-area > div:nth-child(even) {background-color:rgba(0,0,0,0.06);}
+.main-sec2 .chart-section.sec3 .chart-bg .bg-area > div > p,
+.main-sec2 .chart-section.sec4 .chart-bg .bg-area > div > p {padding:10px; font-size:14px; color:#313131; text-align:center;}
+.main-sec2 .chart-section.sec2 .hexagon {fill: lime;stroke: white;stroke-width: 1;}
+.main-sec2 .chart-section.sec2 #emphasize{fill:grey;stroke: white;stroke-width:20;}
+
+/* main sec3 */
+.main-sec3 .assembly-section .list-area {padding:0 0 30px;}
+.main-sec3 .assembly-section .list-area > li {display:flex; justify-content:space-between;}
+.main-sec3 .assembly-section .list-area > li + li {margin:18px 0 0;}
+.main-sec3 .assembly-section .list-area > li .left-area {display:flex;}
+.main-sec3 .assembly-section .list-area > li .left-area .img-assembly {width:64px; height:64px; border-radius:50%;}
+.main-sec3 .assembly-section .list-area > li .left-area .txt-area {padding:0 0 0 16px;}
+.main-sec3 .assembly-section .list-area > li .left-area .txt-area .num {font-size:19px; color:#595852;}
+.main-sec3 .assembly-section .list-area > li .left-area .txt-area .name {position: relative; padding-right:22px; font-size:20px; color:#313131; line-height:1.5;}
+.main-sec3 .assembly-section .list-area > li .left-area .txt-area .name.star-mark:after {content:''; display:block; position:absolute; top:45%; right:0; width:20px; height:20px; background:url('../../images/icon/ico_star.png') no-repeat center; background-size:20px; transform:translateY(-45%);}
+.main-sec3 .assembly-section .list-area > li .left-area .txt-area .party {font-size:13px;}
+.main-sec3 .assembly-section .list-area > li .right-area {position:relative;}
+.main-sec3 .assembly-section .list-area > li .right-area .point {font-family:'Spoqa Han Sans'; font-size:32px; color:#453b3b;}
+.main-sec3 .assembly-section .list-area > li .right-area .point.up:before {content:''; display:block; position:absolute; top:4px; left:-26px; width:12px; height:24px; background:url('../../images/icon/ico_up.png') no-repeat center; background-size:12px 24px;}
+.main-sec3 .assembly-section .list-area > li .right-area .point.down:before {content:''; display:block; position:absolute; top:4px; left:-26px; width:12px; height:24px; background:url('../../images/icon/ico_down.png') no-repeat center; background-size:12px 24px;}
+.main-sec3 .assembly-section .list-area > li .right-area .total-point {font-family:'Spoqa Han Sans'; font-size:20px; color:#808080; line-height:1.5;}
+.main-sec3 .assembly-section .list-area > li.attention {padding:20px 0; background:url('../../images/main/bg_list.png') no-repeat left center; background-size:100% 100%;}
+
+/* main sec4 */
+.main-sec4 .swiper-container {overflow:visible;}
+.main-sec4 .bill-section .box-list {display:flex; position:relative; height:504px; background-color:#fff; flex-direction:column; justify-content:space-between;}
+.main-sec4 .bill-section .box-list .box-header {display:flex; align-items:center; height:64px;}
+.main-sec4 .bill-section .box-list .box-header .num {width:64px; height:64px; background-color:#646460; font-size:24px; color:#fff; line-height:64px; text-align:center;}
+.main-sec4 .bill-section .box-list .box-header p > strong {display:inline-block; padding-left:16px; font-size:36px; color:#86a7a0;}
+.main-sec4 .bill-section .box-list .box-header p > span {display:inline-block; padding-left:6px; font-size:16px; color:#aaa;}
+.main-sec4 .bill-section .box-list .box-content {padding:20px 18px 16px;}
+.main-sec4 .bill-section .box-list .box-content .tit {font-size:16px; color:#3a3a3a; line-height:1.5;}
+.main-sec4 .bill-section .box-list .box-content .txt {font-size:13px; color:#9f9f9f;}
+.main-sec4 .bill-section .box-list .box-content .cont {max-height:300px; padding:16px 0; font-size:15px; color:#8a8a8a; line-height:1.5; overflow:hidden;}
+.main-sec4 .bill-section .box-list .box-content .cont a {color:#bcbcbc;}
+.main-sec4 .bill-section .box-list .box-footer {padding:16px 18px;}
+.main-sec4 .bill-section .box-list .box-footer .txt-area p {font-size:14px; color:#717171; line-height:1.5;}
+.main-sec4 .bill-section .box-list .box-footer .txt-area p.txt {display:inline-block; border-bottom:1px solid #717171; font-weight:700;}
+.main-sec4 .bill-section .box-list .btn-area .btn-two {height:56px;}
+.main-sec4 .bill-section .box-list + .btn-area {border-top:1px solid #e5e5e5;}
+
+/* main sec5 */
+.main-sec5 > p {padding:200px 0; font-size:64px; color:#313131; text-align:center;}
+
+
+/*-------------------------------------------------------------------
+    ## 정당현황
+-------------------------------------------------------------------*/
+/* 정당현황 */
+.party-area {transition:transform 0.3s ease;}
+.is-handler-active .party-area {transform:translateY(0%);}
+.party-fixed {width:100%; height:100%; z-index:100;}
+.party-area {position:fixed; left:0; top:0; width:100%; height:100%; z-index:101; background-color:#f3f2f0; transform:translateY(calc(100% - 250px));}
+.party-area .party-header {display:flex; position:fixed; top:0; left:0; z-index:11; width:100%; height:240px; background-color:#f3f2f0; text-align:center; flex-direction:column; justify-content:space-between; -webkit-box-shadow:0px 2px 2px 0px rgba(0,0,0,0.2); -moz-box-shadow:0px 2px 2px 0px rgba(0,0,0,0.2); box-shadow:0px 2px 2px 0px rgba(0,0,0,0.2);}
+.party-area .party-header .btn-area {height:30px; justify-content:center; align-items:center;}
+.party-area .party-header .btn-handler {width:100%; height:100%;}
+.party-area .party-header .title-area .tit {font-size:36px; font-weight:700; line-height:1.5;}
+.party-area .party-header .title-area .txt {font-size:14px; color:#4a4a4a;}
+.party-area .tab {width:100%;}
+.party-area .tab .tab-nav > li {width:50%;}
+.party-area .tab .tab-nav > li > a {display:block;}
+.party-area .party-container {position:relative; height:calc(100% - 240px); z-index:10; margin-top:240px; padding:16px 0; background-color:#f3f2f0; overflow:auto;}
+
+/* 정당현황 > 기본정보 */
+.basic-info {margin-right:-16px;}
+.basic-info dl dt {position:relative; padding:11px 16px 6px 0; font-size:13px; color:#959595;}
+.basic-info dl dt:before {content:''; display:block; position:absolute; left:0; top:0; width:100%; border-bottom:1px solid #d2d2d2;}
+.basic-info dl dt:first-child {padding-top:0;}
+.basic-info dl dt:first-child:before {display:none;}
+.basic-info dl dd {position:relative; padding:0 16px 16px 8px; font-size:15px; color:#4b4b4b; line-height:1.5;}
+.basic-info dl dd:last-child {padding-bottom:0;}
+.basic-info dl > dd > ul > li {padding-left:12px;}
+
+/* 정당현황 > 실적 */
+.perform-info {position:relative; margin-right:-16px;}
+.perform-info .txt {padding-bottom:20px; font-size:16px; color:#656565;}
+.perform-info .count {padding:0 16px 20px 0; font-size:36px; color:#4b4b4b; text-align:right;}
+.perform-info .count > strong {color:#86a7a0;}
+.perform-info .explan {padding:10px 16px 0 0; border-top:1px solid #d2d2d2; font-size:13px; color:#959595; text-align:right;}
+.perform-info .explan > em {color:#424242;}
+
+.perform-info .toggle-area {display:block; position:absolute; top:26px; left:0;}
+.perform-info .toggle-area .btn-pick .btn {display:block; margin-top:6px;}
+
+
+
+/*-------------------------------------------------------------------
+    ## 의원현황
+-------------------------------------------------------------------*/
+/* 의원현황 > 의원현황 */
+.grid-area {position:relative; /*overflow:hidden;*/}
+.grid-area .cate {padding:8px 0; font-size:12px; color:#5d5d5d; line-height:1,5;}
+.grid-area + .grid-area {margin-top:40px;}
+
+
+/*-------------------------------------------------------------------
+    ## 의안현황
+-------------------------------------------------------------------*/
+/* 의안현황 > 의안현황, 의안그룹 */
+.bill-info {position:relative; margin:0 -16px; background-color:#fff; -webkit-box-shadow:0px 2px 2px 0px rgba(0,0,0,0.2); -moz-box-shadow:0px 2px 2px 0px rgba(0,0,0,0.2); box-shadow:0px 2px 2px 0px rgba(0,0,0,0.2);}
+.bill-info + .bill-info {margin-top:16px}
+.bill-info > .box-area {padding:16px;}
+.bill-info > .box-area .box-header {display:flex; justify-content:space-between;}
+.bill-info > .box-area .box-header .txt-area .tit {font-size:16px; font-weight:700; color:#3a3a3a; line-height:1.6;}
+.bill-info > .box-area .box-header .txt-area .txt {font-size:13px; color:#9f9f9f;}
+.bill-info > .box-area .box-content {padding:16px 0 20px;}
+.bill-info > .box-area .box-content .txt {font-size:15px; color:#8a8a8a; line-height:1.5;}
+.bill-info > .box-area .box-content .txt > a {color:#b6b6b6;}
+.bill-info > .box-area .box-footer {display:flex; justify-content:space-between;}
+.bill-info > .box-area .box-footer .txt-area .txt {display:inline-block; border-bottom:1px solid #717171; font-size:14px; font-weight:700; color:#717171;}
+.bill-info > .box-area .box-footer .txt-area .date {font-size:14px; color:#717171; line-height:1.5;}
+.bill-info > .box-area .box-footer .btn-area .btn + .btn {margin-left:6px;}
+.btn-info {display:flex; justify-content:space-between; align-items:center; width:100%;}
+.box-area + .btn-info {border-top:1px solid #e5e5e5;}
+
+/* 의안현황 > 의안상세 */
+.bill-view {margin-top:-14px; padding:14px 0 28px; background-color:#fff; -webkit-box-shadow:0px 2px 2px 0px rgba(0,0,0,0.2); -moz-box-shadow:0px 2px 2px 0px rgba(0,0,0,0.2); box-shadow:0px 2px 2px 0px rgba(0,0,0,0.2);}
+.view-header {display:flex; justify-content:space-between;}
+.view-header .txt-area .tit {font-size:18px; font-weight:700; color:#3a3a3a; line-height:1.6;}
+.view-header .txt-area .txt {font-size:14px; color:#9f9f9f;}
+.view-header .txt-area .num {font-size:12px; color:#9f9f9f;}
+.view-content {padding:26px 0}
+.view-content .txt {font-size:15px; color:#8a8a8a; line-height:1.5;}
+.view-footer {display:flex; justify-content:space-between;}
+.view-footer .txt-area .txt {display:inline-block; border-bottom:1px solid #717171; font-size:14px; font-weight:700; color:#717171;}
+.view-footer .txt-area .date {font-size:14px; color:#717171; line-height:1.5;}
+.view-footer .btn-area .btn + .btn {margin-left:6px;}
+
+/* 의안현황 > 의안상세 > 찬성,반대 댓글 */
+.comment {display:block;}
+.comment .search-area {display:none; height:72px; padding:16px; background-color:#fff;}
+.comment .search-area .input-search {width:100%; height:40px; padding:0 8px; border-radius:2px; background-color:#dedede; color:#484848;}
+.comment .search-area.dissent {display:block; background-color:#383836;}
+.comment .search-area.dissent .input-search {background-color:#fff;}
+.comment .content-area {position:relative; padding:16px 16px 30px;}
+.comment .content-area .left-box {display:flex; align-items:flex-end;}
+.comment .content-area .left-box .date {padding:0 8px 4px; font-size:11px; color:#aaa; order:1;}
+.comment .content-area .left-box .txt-area {position:relative; width:228px; height:100%; padding:12px; border-radius:4px; background-color:#fff;}
+.comment .content-area .left-box .txt-area:after {content:''; display:block; position:absolute; left:10px; bottom:-12px; width:0px; height:0px; border-bottom:12px solid transparent; border-left:16px solid #fff;}
+.comment .content-area .left-box .txt-area .txt {font-size:15px; color:#484848; line-height:1.3;}
+.comment .content-area .left-box .txt-area .user {padding-top:8px; font-size:13px; color:rgba(0,0,0,0.5)}
+.comment .content-area .right-box {display:flex; align-items:flex-end; justify-content:flex-end;}
+.comment .content-area .right-box .date {padding:0 8px 4px; font-size:11px; color:#aaa;}
+.comment .content-area .right-box .txt-area {position:relative; width:228px; height:100%; padding:12px; border-radius:4px; background-color:#383836; order:1;}
+.comment .content-area .right-box .txt-area:after {content:''; display:block; position:absolute; right:10px; bottom:-12px; width:0px; height:0px; border-bottom:12px solid transparent; border-right:16px solid #383836;}
+.comment .content-area .right-box .txt-area .txt {font-size:15px; color:#fff; line-height:1.3;}
+.comment .content-area .right-box .txt-area .user {padding-top:8px; font-size:13px; color:rgba(255,255,255,0.5);}
+.comment .content-area .left-box + .right-box,
+.comment .content-area .right-box + .left-box {margin-top:28px;}
+
+
