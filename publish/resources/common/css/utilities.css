@@ -1,0 +1,114 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+	파일정의 : 전역스타일 공통
+	작성날짜 : 2020-02-04
+	참고사항 : 가이드화 하는 것을 권장하며, 예외의 경우에만 사용한다.
+	분류순서 : General > Grid Layout > Custom Color > Fixed Size & Gutter
+	속성순서 : 표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    ## General
+-------------------------------------------------------------------*/
+/* Scroll  */
+.is-bodyFixed {position:fixed; width:100%; height:100%; left:0; top:0; overflow:hidden;}
+
+/* IR */
+.blind {position:absolute; top:-999em; left:-999em; z-index:0; width:1px; height:1px; overflow:hidden;}
+
+/* Display */
+.dis-ib {display:inline-block;}
+.dis-b {display:block;}
+.dis-i {display:inline;}
+.dis-n {display:none;}
+.dis-f {display:-webkit-box; display:-ms-flexbox; display:flex;}
+
+/* Margin */
+.mar-t0 {margin-top:0 !important;}
+.mar-r0 {margin-right:0 !important;}
+.mar-b0 {margin-bottom:0 !important;}
+.mar-l0 {margin-left:0 !important;}
+
+/* Padding */
+.pad-t0 {padding-top:0 !important}
+.pad-r0 {padding-right:0 !important}
+.pad-b0 {padding-bottom:0 !important}
+.pad-l0 {padding-left:0 !important}
+
+/* Border */
+.bdr-t0 {border-top-width:0 !important;}
+.bdr-r0 {border-right-width:0 !important;}
+.bdr-b0 {border-bottom-width:0 !important;}
+.bdr-l0 {border-left-width:0 !important;}
+
+/* Align - Inline */
+.align-t {vertical-align:top !important;}
+.align-m {vertical-align:middle !important;}
+.align-b {vertical-align:bottom !important;}
+.align-l {text-align:left !important;}
+.align-c {text-align:center !important;}
+.align-r {text-align:right !important;}
+.align-j {text-align:justify; -moz-text-align-last:justify; -webkit-text-align-last:justify; text-align-last:justify;}
+
+.ellipsis1 {overflow:hidden; white-space:nowrap; -o-text-overflow:ellipsis; text-overflow:ellipsis;}
+.ellipsis2 {overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.ellipsis3 {overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;}
+
+/*-------------------------------------------------------------------
+	## Layout
+-------------------------------------------------------------------*/
+/* Grid (Flexible) */
+.grid {display:-webkit-flex; display:-webkit-box; display:-ms-flexbox; display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap;}
+
+/* Align - Flexible */
+.flex-auto > .col {-webkit-box-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;}
+.flex-column {-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}
+.flex-wrap {-ms-flex-wrap:wrap;flex-wrap:wrap;}
+.flex-start {-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;}
+.flex-center {-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;}
+.flex-end {-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;}
+.flex-around {-ms-flex-pack:distribute;justify-content:space-around;}
+.flex-between {-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;}
+.flex-evenly {-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly;}
+.cross-start {-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;}
+.cross-center {-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+.cross-end {-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;}
+.cross-around {-webkit-box-align:space-around;-ms-flex-align:space-around;align-items:space-around;}
+.cross-between {-webkit-box-align:space-between;-ms-flex-align:space-between;align-items:space-between;}
+.cross-evenly {-webkit-box-align:space-evenly;-ms-flex-align:space-evenly;align-items:space-evenly;}
+
+/* Default */
+.col {flex:none; width:100%;}
+.col.col-auto {width:auto;}
+.col.col-top {margin-bottom:auto;}
+.col.col-bottom {margin-top:auto;}
+.col.col-right {margin-left:auto;}
+.col.col-left {margin-right:auto;}
+
+/* All Device */
+.col.col-1  {width:8.33333333%;}
+.col.col-2  {width:16.6666%;}
+.col.col-3  {width:25%;}
+.col.col-4  {width:33.3333%;}
+.col.col-5  {width:41.66666667%;}
+.col.col-6  {width:50%;}
+.col.col-7  {width:58.33333333%;}
+.col.col-8  {width:66.66666667%;}
+.col.col-9  {width:75%;}
+.col.col-10 {width:83.33333334%;}
+.col.col-11 {width:91.66666667%;}
+.col.col-12 {width:100%;}
+
+/* Gutter */
+.gut-10 {margin:-5px;}
+.gut-10 > .col {padding:5px;}
+
+/*-------------------------------------------------------------------
+	## Custom Color
+-------------------------------------------------------------------*/
+/* Color */
+.bg-primary {background-color: !important;}
+.txt-primary {color: !important;}
+.line-primary {border-color: !important;}
+.bg-secondary {background-color: !important;}
+.txt-secondary {color: !important;}
+.line-secondary {border-color: !important;}
