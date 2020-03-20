@@ -54,7 +54,35 @@
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>	
+		
+		<!-- lombok -->
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.12</version>
+		<scope>provided</scope>
 		</dependency>		
+		
+		
+
+		<!-- json -->
+		<dependency>
+		    <groupId>com.googlecode.json-simple</groupId>
+		    <artifactId>json-simple</artifactId>
+		    <version>1.1.1</version>
+		</dependency>		
+		<dependency> 
+		   <groupId>org.codehaus.jackson</groupId> 
+		   <artifactId>jackson-mapper-asl</artifactId> 
+		   <version>1.9.13</version> 
+		</dependency>
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>2.10.0</version>
+		</dependency>			
 		
 	</dependencies>
 
