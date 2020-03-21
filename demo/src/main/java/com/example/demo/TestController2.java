@@ -27,7 +27,7 @@ public class TestController2 {
 	@RequestMapping(value = "/committee")
 	public String committee() {
 		
-		System.out.println("committee");
+		System.out.println("committee");	
 		
 		return "committee/committee";
 	}
