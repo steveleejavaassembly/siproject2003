@@ -1,0 +1,36 @@
+@charset 'utf-8';
+/*-------------------------------------------------------------------
+	파일정의 : 초기화 스타일
+	작성날짜 : 2020-02-04
+	분류순서 : Base > Fonts
+	속성순서 : 표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    ## Fonts
+-------------------------------------------------------------------*/
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(https://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(libs/fontawesome-all.min.css);
+
+/*-------------------------------------------------------------------
+    ## Reset
+-------------------------------------------------------------------*/
+html, body, div, ul, ol, dl, li, dt, dd, p, h1, h2, h3, h4, h5, h6, table, thead, tbody, tr, th, td, caption, address,
+canvas, details, figure, figcaption, footer, header, menu, nav, section, article, aside,
+button, select, textarea, input, fieldset, legend, label, a, span, strong, em, address, dfn, small, i, b, ::before, ::after {margin:0; padding:0; border:0; list-style:none; color:inherit; font-style:normal; font-size:100%; font-weight:inherit; font-family:inherit; line-height:inherit; word-break:inherit; word-wrap:inherit; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box;}
+article, aside, canvas, details, figure, figcaption, footer, header, menu, nav, section {display:block;}
+body {font-family: 'Spoqa Han Sans', 'Hanna', fantasy; font-size:14px; font-weight:400; line-height:1; word-break:keep-all; word-wrap:word-break; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
+html[lang=ja] body, html[lang=zh] body {word-break:normal;}
+[hidden], hr {display:none;}
+img {vertical-align:middle;}
+button {background-color:transparent; cursor:pointer;}
+fieldset, iframe {width:100%;}
+img, a, frame, iframe, fieldset {border:0;}
+a {text-decoration:none;}
+table {width:100%; border-spacing:0; border-collapse:collapse;}
+caption {display:block; position:absolute; left:-9999px;}
+legend {position:absolute; left:-9999em; top:-9999em;}
+button {overflow:hidden; background-color:transparent; cursor:pointer;}
+button::-moz-focus-inner {border:0px; padding:0px;}
+[tabindex='0']:focus,a:focus,button:focus,input:focus,textarea:focus,select:focus {outline:0;}
+[tabindex='0'],a,button,input,textarea,select {-webkit-tap-highlight-color:transparent;}
