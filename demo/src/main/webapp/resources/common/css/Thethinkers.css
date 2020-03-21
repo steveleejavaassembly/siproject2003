@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* Plugins */
+@import url('./libs/animate.css');
+@import url('./libs/swiper.min.css');
+/* Cores */
+@import url('./base.css');
+@import url('./layout.css');
+@import url('./component.css');
+@import url('./content.css');
+@import url('./utilities.css');
+
