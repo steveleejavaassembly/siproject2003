@@ -1,0 +1,211 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------
+파일정의 : UI Components
+작성날짜 : 2020-02-04
+참고사항 : 공통 범위를 최소화하고, 컨텐츠 스타일로 구분한다.
+분류순서 : Element > Block > Layout > Plugin
+속성순서 : 표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	## Form
+-------------------------------------------------------------------*/
+input::placeholder {font-size:14px; color:#c9c9c9; font-weight:300;}
+input {width:100%; height:40px; padding:0 8px; border-radius:2px; background-color:#dedede; color:#484848; line-height:40px;}
+select {appearance:none; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none;}
+select::-ms-expand {display:none;}
+
+/* Form Select */
+.form-select {width:100%; height:40px; padding:0 8px; color:#484848; border-radius:2px; background:#dedede url('../../images/icon/ico_select.png') no-repeat right 10px center; background-size:8px; vertical-align:middle;}
+
+/* checkbox */
+input[type="checkbox"] {width:22px; height:22px;}
+/* checkbox design */
+.check {display:inline-block; position:relative; vertical-align:middle;}
+.check label > input[type="checkbox"] {display:none; opacity:0;}
+.check label > span {display:inline-block; position:relative; padding-left:25px;}
+.check label > span:before {content:''; display:block; position:absolute; top:0px; left:0; width:22px; height:22px; background:#fff url('../../images/icon/ico_checkbox.png');}
+.check label > input[type="checkbox"]:checked + span:before {content:''; display:block; position:absolute; top:0; left:0; width:22px; height:22px; background:#fff url('../../images/icon/ico_checkbox.png') no-repeat; background-size:22px;}
+.check label > input[type="checkbox"]:checked + span:after {content:''; display:block; position:absolute; top:0; left:0; width:22px; height:22px;background:url('../../images/icon/ico_checkbox_on.png') no-repeat; background-size:22px;}
+
+
+/*-------------------------------------------------------------------
+	## Button
+-------------------------------------------------------------------*/
+/* Default */
+button {overflow:hidden; padding:0px; border:0px; font-weight:normal; background-color:transparent; cursor:pointer;}
+button::-moz-focus-inner {border:0px; padding:0px;}
+.btn-area {display:flex;}
+.btn {display:inline-block; position:relative; overflow:hidden; justify-content:center; align-items:center;}
+.btn > span {position:relative; z-index:1; display:inline-flex; flex:none; justify-content:center; align-items:center; height:100%; width:100%;}
+.btn * {pointer-events:none;}
+.btn:focus {outline:0;}
+
+/* Effect Wave */
+.effect-wave,
+.btn .effect-wave {display:block; position:absolute; transform:translateX(-50%) translateY(-50%); width:0px; height:0px; background-color:#000; border-radius:50%; opacity:0.1; pointer-events:none;}
+.btn.black .effect-wave {background-color:#fff;}
+
+/* Sticky btn */
+.btn-sticky {position:relative;}
+.btn-sticky::before {content:''; display:block; height:66px;}
+.btn-sticky .btn-area {position:absolute; left:0; top:0; display:flex; width:100%; justify-content:space-between; align-items:center; z-index:100;}
+.btn-sticky .btn-area .btn-two {height:66px}
+.btn-sticky .btn-area.is-fixed-top {position:fixed; bottom:auto; top:0;}
+.btn-sticky .btn-area.is-fixed-bottom {position:fixed; top:auto; bottom:0;}
+
+/* Design */
+.btn-line {min-height:32px; padding:8px 10px; border:1px solid #979797; border-radius:2px; color:#979797;}
+.btn-line.is-active {border:none; background-color:#79aea4; color:#fff;}
+.btn-line span {font-size:12px; font-weight:700;}
+.btn-fill {min-height:32px; padding:8px 20px; border-radius:2px; background-color:#79aea4; color:#fff;}
+.btn-fill.dark-gray {background-color:#676560;}
+.btn-one {width:100%; height:48px; border-radius:2px; background-color:#676560; color:#fff;}
+.btn-one.complet {background-color:rgba(103,101,96,0.5);}
+.btn-two {width:50%; height:48px; background-color:#fff; color:#8a8a8a;}
+.btn-two.black {background-color:#383836; color:#fff;}
+.btn-two > span {font-weight:700;}
+.btn-menu {width:36px; height:36px; border-radius:4px;}
+.btn-search {width:36px; height:36px; border-radius:4px;}
+.btn-back {width:36px; height:36px; border-radius:4px;}
+.btn-etc {width:30px; height:30px; border-radius:4px;}
+.btn-send {width:30px; height:30px; border-radius:4px;}
+.btn-bookmark {width:30px; height:30px; border-radius:4px; background:url('../../images/icon/ico_bookmark.png') no-repeat center; background-size:16px;}
+.btn-bookmark.is-checked {background:url('../../images/icon/ico_bookmark_on.png') no-repeat center; background-size:16px;}
+.btn-bookmark > span {text-indent:-9999px;}
+.btn-support {width:120px; min-height:28px; border:1px solid #979797; border-radius:2px; color:#383836;}
+.btn-support.support1 {border:0; background:url('../../images/common/btn_support.png') no-repeat; background-size:120px 28px;}
+.btn-support.support2 {border:0; background:url('../../images/common/btn_no_support.png') no-repeat; background-size:120px 28px;}
+
+
+/*-------------------------------------------------------------------
+	## Icon
+-------------------------------------------------------------------*/
+/* Default */
+.ico {display:inline-block; background:no-repeat 0 0; vertical-align:middle; overflow:hidden; color:transparent; text-indent:-999px; white-space:nowrap;}
+.ico-menu {width:24px; height:24px; background:url('../../images/icon/ico_menu.png') no-repeat center; background-size:20px;}
+.ico-search {width:24px; height:24px; background:url('../../images/icon/ico_search.png') no-repeat center; background-size:20px;}
+.ico-back {width:24px; height:24px; background:url('../../images/icon/ico_arrow_left.png') no-repeat center; background-size:10px;}
+.ico-etc {width:20px; height:20px; background:url('../../images/icon/ico_more.png') no-repeat center; background-size:18px;}
+.ico-send {width:20px; height:20px; background:url('../../images/icon/ico_send.png') no-repeat center; background-size:18px;}
+.ico-handler {width:44px; height:4px; border-radius:20px; background-color:#e4e4e4;}
+/* .ico-bookmark {width:20px; height:20px; background:url('../../images/icon/ico_bookmark.png') no-repeat center; background-size:16px;} */
+.ico-check-mark {width:12px; height:12px; background:url('../../images/icon/ico_check_mark.png') no-repeat center; background-size:10px 8px;}
+.ico-arrow-toggle {width:10px; height:16px; background:url('../../images/icon/ico_select.png') no-repeat center; background-size:10px;}
+.ico-arrow-right {width:24px; height:24px; background:url('../../images/icon/ico_arrow_right.png') no-repeat top 1px center; background-size:10px;}
+
+
+/*-------------------------------------------------------------------
+	## Bullet
+-------------------------------------------------------------------*/
+/* circle */
+.bul-circle {position:relative;}
+.bul-circle:before {content:''; display:block; position:absolute; top:50%; left:0; width:4px; height:4px; border-radius:50%; background-color:#4b4b4b; transform:translateY(-50%);}
+
+/* square */
+.bul-square {position:relative;}
+.bul-square:before {content:''; display:block; position:absolute; top:50%; left:0; width:18px; height:18px; transform:translateY(-50%);}
+.bul-square.tmj:before {background-color:#1970b9;}
+.bul-square.lkp:before {background-color:#c9141e;}
+.bul-square.j21:before {background-color:#ffcc03;}
+
+/* hexagon */
+.bul-hexagon {position:relative; }
+.bul-hexagon:before {content:''; display:block; position:absolute; top:50%; left:0; width:18px; height:20px; transform:translateY(-50%);}
+.bul-hexagon.tmj:before {background:url('../../images/icon/ico_hexagon_b.png') no-repeat; background-size:18px 20px;}
+.bul-hexagon.lkp:before {background:url('../../images/icon/ico_hexagon_r.png') no-repeat; background-size:18px 20px;}
+.bul-hexagon.j21:before {background:url('../../images/icon/ico_hexagon_y.png') no-repeat; background-size:18px 20px;}
+
+
+/*-------------------------------------------------------------------
+	## Search
+-------------------------------------------------------------------*/
+.search-control {position:relative; width:100%; padding:16px 0;}
+.search-control .grid {margin:0 -5px;}
+.search-control .col {padding:0 5px;}
+.search-control .grid + .grid,
+.search-control .grid + .select-area,
+.search-control .grid + .form-area,
+.search-control .select-area + .form-area {margin-top:8px;}
+
+
+/*-------------------------------------------------------------------
+	## Tab
+-------------------------------------------------------------------*/
+.tab {position:relative;}
+.tab .tab-nav {display:flex; align-items:center;}
+.tab .tab-nav > li {width:auto;}
+.tab .tab-nav > li > a {position:relative; display:inline-block; overflow:hidden; padding:16px; font-family:'Hanna'; font-size:14px; color:#c1c1c1;}
+.tab .tab-nav > li > a.badge:after {content:''; display:block; position:absolute; top:12px; right:7px; width:8px; height:8px; border-radius:50%; background-color:#f59090;}
+.tab .tab-nav > li.is-selected a {border-bottom:2px solid #79aea4; color:#717171;}
+
+
+/*-------------------------------------------------------------------
+	## Box
+-------------------------------------------------------------------*/
+.box-round {padding:12px 16px; border-radius:6px; background-color:#fff; -webkit-box-shadow:0px 2px 6px 0px rgba(0,0,0,0.2); -moz-box-shadow:0px 2px 6px 0px rgba(0,0,0,0.2); box-shadow:0px 2px 6px 0px rgba(0,0,0,0.2);}
+.box-round + .box-round {margin-top:16px;}
+
+
+/*-------------------------------------------------------------------
+	## Swiper
+-------------------------------------------------------------------*/
+.swiper-pagination-bullet {width:10px; height:10px; background-color:rgba(0,0,0,0.5); opacity:1;}
+.swiper-pagination-bullet-active {background-color:#fff; border:1px solid #8e8e8e;}
+
+
+/*-------------------------------------------------------------------
+	## Color
+-------------------------------------------------------------------*/
+/*더불어민주당*/
+.tmj {color:#1970b9;}
+.tmj-circle {width:12px; height:12px; border-radius:50%; background-color:#0082ff;}
+/*자유한국당*/
+.lkp {color:#c9141e;}
+.lkp-circle {width:12px; height:12px; border-radius:50%; background-color:#c41c1f;}
+/*바른미래당*/
+.bm {color:#69c2d5;}
+.bm-circle {width:12px; height:12px; border-radius:50%; background-color:#69c2d5;}
+/*정의당*/
+.j21 {color:#ffcc03;}
+.j21-circle {width:12px; height:12px; border-radius:50%; background-color:#ffcc03;}
+/*민주평화당*/
+.pp {color:#83bf46;}
+.pp-circle {width:12px; height:12px; border-radius:50%; background-color:#83bf46;}
+/*우리공화당*/
+.orp {color:#5a5dbe;}
+.orp-circle {width:12px; height:12px; border-radius:50%; background-color:#5a5dbe;}
+/*민중당*/
+.mj {color:#e1783f;}
+.mj-circle {width:12px; height:12px; border-radius:50%; background-color:#e1783f;}
+/*무소속*/
+.im {color:#616161;}
+.im-circle {width:12px; height:12px; border-radius:50%; background-color:#616161;}
+
+
+/*-------------------------------------------------------------------
+	## Grid
+-------------------------------------------------------------------*/
+.grid-area .ui-jqgrid {border-radius:10px; background-color:#fff;}
+.grid-area .ui-jqgrid .ui-jqgrid-hdiv {overflow:hidden; border-radius:10px;}
+.grid-area .ui-jqgrid .ui-jqgrid-bdiv {border-radius:10px;}
+.grid-area .ui-th-ltr, .grid-area .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr {height:64px; padding:0 8px; border-bottom:1px solid #d6d6d6; background-color:#fff;}
+.grid-area .ui-jqgrid-htable thead tr {background-color:#fff;}
+.grid-area .ui-jqgrid-htable thead tr > th {font-size:15px; font-weight:700; color:#bbb;}
+.grid-area .ui-jqgrid-htable thead tr > th.ui-state-default:first-child {border-right:1px solid #d6d6d6;}
+.grid-area .ui-jqgrid tr.ui-row-ltr td {height:64px; padding:0 8px; border-right-width:0; border-bottom-width:0; font-size:15px; color:#5d5d5d;}
+.grid-area .ui-jqgrid tr.ui-row-ltr td.starAssembly {color:#e3ae40; font-weight:700;}
+.grid-area .ui-jqgrid-btable tbody tr:nth-child(odd) {background-color:#fbfbfb;}
+.grid-area #grid_frozen.ui-jqgrid-btable tbody tr {background-color:#fff;}
+.grid-area #grid_frozen.ui-jqgrid-btable tbody tr:nth-child(odd) {background-color:#fbfbfb;}
+.grid-area #grid_frozen.ui-jqgrid-btable tbody tr td:first-child {border-right:1px solid #d6d6d6;}
+
+/* sort icon */
+.grid-area .ui-jqgrid-sortable .s-ico {padding-left:6px;}
+.grid-area .ui-state-default .ui-icon {background:url('../../images/icon/ico_select.png') no-repeat center; background-size:12px; opacity:0.4;}
+.grid-area .ui-widget-content .ui-icon {background:url('../../images/icon/ico_select.png') no-repeat center; background-size:12px;}
+.grid-area .ui-jqgrid .ui-icon-asc {width:12px; height:12px; margin-top:-3px; transform:rotate(180deg);}
+.grid-area .ui-jqgrid .ui-icon-desc {width:12px; height:12px; margin-top:8px; margin-left:1px;}
+.grid-area .ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {opacity:.2;}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {border-top-left-radius:10px;}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {border-top-right-radius:10px;}
